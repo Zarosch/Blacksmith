@@ -26,7 +26,7 @@ public class InventoryClickListener implements Listener {
                 if (player.getInventory().getItemInMainHand() != null) {
                     final ItemStack item = player.getInventory().getItemInMainHand();
                     if (plugin.getFileManager().getWhitelist().contains(item.getType().toString())) {
-                        final Integer price = item.getType().getMaxDurability() - item.getDurability();
+                        final Integer price = (int) item.getDurability();
                         if (!FacilityAPI.hasMoney(player, price.doubleValue())) {
                             player.sendMessage(MessageUtil.BLACKSMITH_NOTENOUGHMONEY.getLocal());
                             player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_BREAK, 5L, 5L);

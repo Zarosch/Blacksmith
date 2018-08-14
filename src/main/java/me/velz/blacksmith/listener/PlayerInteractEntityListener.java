@@ -30,7 +30,7 @@ public class PlayerInteractEntityListener implements Listener {
                     final ItemStack item = event.getPlayer().getInventory().getItemInMainHand();
                     final Material type = item.getType();
                     if (plugin.getFileManager().getWhitelist().contains(type.toString())) {
-                        final Integer price = type.getMaxDurability() - item.getDurability();
+                        final Integer price = (int) item.getDurability();
                         final Inventory inventory = Bukkit.createInventory(null, 9, MessageUtil.BLACKSMITH_INVENTORYNAME.getLocal());
                         final List<String> repairLore = new ArrayList<>();
                         repairLore.add(MessageUtil.BLACKSMITH_REPAIRITEMLORE_PRICE.getLocal().replaceAll("%price", String.valueOf(price)));
