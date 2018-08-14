@@ -6,6 +6,13 @@ public enum MessageUtil {
 
     PREFIX("§f[§eBlacksmith§f] "),
     
+    BLACKSMITH_REPAIRITEM("§aReparieren"),
+    BLACKSMITH_REPAIRITEMLORE_PRICE("§fPreis: §e%price Münzen"),
+    BLACKSMITH_CANCELITEM("§cAbbrechen"),
+    BLACKSMITH_INVENTORYNAME("§8§lSchmied"),
+    BLACKSMITH_NOTWHITELISTED("§cDieses Item kann ich leider nicht reparieren."),
+    BLOCKSMITH_NOITEMINHAND("§cBitte halte das Item was du reparieren willst in der Hand."),
+    
     ERROR_NOPERMISSIONS("§cDazu hast du keine Berechtigung.");
 
     @Getter
