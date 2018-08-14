@@ -10,6 +10,8 @@ public enum MessageUtil {
     BLACKSMITH_REPAIRITEMLORE_PRICE("§fPreis: §e%price Münzen"),
     BLACKSMITH_CANCELITEM("§cAbbrechen"),
     BLACKSMITH_INVENTORYNAME("§8§lSchmied"),
+    BLACKSMITH_NOTENOUGHMONEY("§cDu hast nicht genügend Münzen."),
+    BLACKSMITH_REPAIRED("§aDein Item wurde für §e%price Münzen§a repariert."),
     BLACKSMITH_NOTWHITELISTED("§cDieses Item kann ich leider nicht reparieren."),
     BLOCKSMITH_NOITEMINHAND("§cBitte halte das Item was du reparieren willst in der Hand."),
     
