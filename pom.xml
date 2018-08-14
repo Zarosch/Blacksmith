@@ -20,6 +20,12 @@
             <systemPath>${basedir}/lib/spigot-1.12.2.jar</systemPath>
         </dependency>
         <dependency>
+            <groupId>me.velz</groupId>
+            <artifactId>Facility</artifactId>
+            <version>0.50-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.16.16</version>
