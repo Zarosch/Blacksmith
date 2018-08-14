@@ -34,8 +34,8 @@ public class PlayerInteractEntityListener implements Listener {
                         final Inventory inventory = Bukkit.createInventory(null, 9, MessageUtil.BLACKSMITH_INVENTORYNAME.getLocal());
                         final List<String> repairLore = new ArrayList<>();
                         repairLore.add(MessageUtil.BLACKSMITH_REPAIRITEMLORE_PRICE.getLocal().replaceAll("%price", String.valueOf(price)));
-                        inventory.setItem(1, new ItemBuilder().setMaterial(Material.CONCRETE).setLore(repairLore).setDisplayName(MessageUtil.BLACKSMITH_REPAIRITEM.getLocal()).build());
-                        inventory.setItem(7, new ItemBuilder().setMaterial(Material.CONCRETE).setDisplayName("§cAbbrechen").build());
+                        inventory.setItem(1, new ItemBuilder().setMaterial(Material.CONCRETE).setLore(repairLore).setDisplayName(MessageUtil.BLACKSMITH_REPAIRITEM.getLocal()).setDurability((short)5).build());
+                        inventory.setItem(7, new ItemBuilder().setMaterial(Material.CONCRETE).setDisplayName("§cAbbrechen").setDurability((short)14).build());
                         event.getPlayer().openInventory(inventory);
                     } else {
                         event.getPlayer().sendMessage(MessageUtil.PREFIX.getLocal() + MessageUtil.BLACKSMITH_NOTWHITELISTED.getLocal());
