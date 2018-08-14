@@ -10,11 +10,14 @@ public class FileManager {
     private final FileBuilder configBuilder = new FileBuilder("plugins/Blacksmith", "config.yml");
     
     @Getter @Setter
-    private List<String> smithNames;
+    private List<String> smithNames, whitelist;
     
     public void setDefaults() {
         this.getConfigBuilder().addDefault("blacksmith.names", new String[] {
             "§6Blacksmith"
+        });
+        this.getConfigBuilder().addDefault("blacksmith.whitelist", new String[] {
+            "IRON_SWORD"
         });
         this.getConfigBuilder().save();
     }
