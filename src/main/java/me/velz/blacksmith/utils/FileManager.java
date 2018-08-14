@@ -24,6 +24,7 @@ public class FileManager {
     
     public void load() {
         this.setSmithNames(this.getConfigBuilder().getStringList("blacksmith.names"));
+        this.setWhitelist(this.getConfigBuilder().getStringList("blacksmith.whitelist"));
     }
     
 }
