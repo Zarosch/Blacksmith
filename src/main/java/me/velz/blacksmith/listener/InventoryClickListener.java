@@ -36,7 +36,7 @@ public class InventoryClickListener implements Listener {
                         FacilityAPI.takeMoney(player, price.doubleValue());
                         item.setDurability((short) 0);
                         player.getInventory().setItemInMainHand(item);
-                        player.sendMessage(MessageUtil.BLACKSMITH_REPAIRED.getLocal().replaceAll("%price", String.valueOf(price)));
+                        player.sendMessage(MessageUtil.PREFIX.getLocal() + MessageUtil.BLACKSMITH_REPAIRED.getLocal().replaceAll("%price", String.valueOf(price)));
                         player.closeInventory();
                         player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_USE, 5L, 5L);
                     } else {
